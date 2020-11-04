@@ -10,7 +10,10 @@ class NewTransaction extends StatefulWidget {
   NewTransaction(this.addNewTransaction);
 
   @override
-  _NewTransactionState createState() => _NewTransactionState();
+  _NewTransactionState createState() { 
+    print("Constructuro NewTransaction Widget");
+    return _NewTransactionState(); 
+  }
 }
 
 class _NewTransactionState extends State<NewTransaction> {
@@ -32,6 +35,29 @@ class _NewTransactionState extends State<NewTransaction> {
         _selectedDate = pickedDate;
       });
     });
+  }
+
+  _NewTransactionState() {
+    print("Constructuro NewTransaction State");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print("init state");
+  }
+
+  @override
+  void didUpdateWidget(NewTransaction oldWidget) {
+    print("didUpdateWidgett");
+    super.didUpdateWidget(oldWidget);
+   
+  }
+
+  @override
+  void dispose() {
+    print("dispose");
+    super.dispose();
   }
 
   void _submitData() {
